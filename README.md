@@ -1,1 +1,2 @@
 # Teeny-tiny-notes-app
+This is a teeny-tiny notes app that implements dagger2 and room. First time using dagger and it is complicated. I recommend using hilt on new future projects. I used kapt since the project kept crashing using both ksp(room) and kapt(dagger) same time. There are a few enhancements that aren't complete. I used this project to learn the two concepts together. I have had experience with room but not with dagger. Feel free to contribute.
