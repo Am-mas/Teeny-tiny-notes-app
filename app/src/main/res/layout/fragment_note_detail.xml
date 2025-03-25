@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/background"
+    tools:context="ui.NoteDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/arrow_back_icon"
+            app:titleTextColor="?attr/colorPrimary"
+            android:background="?attr/background"
+            app:menu="@menu/detail_fragment_menu"
+            app:title="Note" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/noteTitle"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:textSize="18sp"
+
+            android:textStyle="bold|italic" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:contentDescription="delete icon"
+            android:backgroundTint="?attr/background"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:src="@drawable/delete_icon"
+            app:tint="?attr/colorOnBackground" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/noteContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="8dp" />
+
+<!--    <Button-->
+<!--        android:id="@+id/deleteButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Delete"-->
+<!--        android:drawableStart="@drawable/delete_icon"-->
+<!--        android:padding="16dp"-->
+<!--        android:layout_marginTop="16dp" />-->
+</LinearLayout>

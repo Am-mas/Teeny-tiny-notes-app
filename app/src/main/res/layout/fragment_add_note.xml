@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    tools:context="ui.AddNoteFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/background"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/background"
+                app:navigationIcon="@drawable/arrow_back_icon"
+                app:title="Add note"
+                app:titleTextColor="?attr/colorPrimary" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <!--    <RadioGroup-->
+        <!--        android:id="@+id/modeSelector"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:orientation="horizontal"-->
+        <!--        android:layout_marginTop="16dp">-->
+
+        <!--        <RadioButton-->
+        <!--            android:id="@+id/paragraphMode"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Paragraph"-->
+        <!--            android:checked="true"/>-->
+
+        <!--        <RadioButton-->
+        <!--            android:id="@+id/bulletListMode"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Bullets"/>-->
+
+        <!--        <RadioButton-->
+        <!--            android:id="@+id/numberListMode"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Numbers"/>-->
+
+        <!--        <RadioButton-->
+        <!--            android:id="@+id/todoListMode"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="To-do"/>-->
+        <!--    </RadioGroup>-->
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="?attr/background"
+            android:hint="Title"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:text="26th march"
+            android:textColor="?attr/colorOutline"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/contentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="?attr/background"
+            android:hint="Content"
+            android:padding="16dp" />
+        <LinearLayout
+            android:id="@+id/todoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2">
+
+        <ImageButton
+            android:id="@+id/paragraph_formatter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/background"
+            android:clickable="true"
+            android:padding="16dp"
+            android:contentDescription="paragraph format"
+            android:focusable="true"
+            android:src="@drawable/segment1_para"
+            app:tint="?attr/colorOnBackground" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/to_do_list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/background"
+            android:clickable="true"
+            android:padding="16dp"
+            android:contentDescription="To do list"
+            android:focusable="true"
+            android:src="@drawable/check_circle"
+            app:tint="?attr/colorOnBackground" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/numbering_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/background"
+            android:clickable="true"
+            android:padding="16dp"
+            android:contentDescription="number list"
+            android:focusable="true"
+            android:src="@drawable/format_list_numbered"
+            app:tint="?attr/colorOnBackground" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

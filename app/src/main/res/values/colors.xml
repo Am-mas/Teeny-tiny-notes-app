@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Light theme colors-->
+    <color name="primary_light">#FB8C00</color>
+    <color name="secondary_light">#FFB300</color>
+    <color name="tertiary_light">#52F50C</color>
+    <color name="error_light">#D32F2F</color>
+    <color name="background_light">#FFFFFFFF</color>
+    <color name="outline_light">#E0E0E0</color>
+    <color name="on_primary_light">#FFFFFFFF</color>
+    <color name="on_secondary_light">#0F1C26</color>
+    <color name="on_tertiary_light">#0F1C26</color>
+    <color name="on_error_light">#FFFFFFFF</color>
+    <color name="on_background_light">#1B1B1B</color>
+    <color name="primary_container_light">#E6FB8C00</color>
+    <color name="secondary_container_light">#00050505</color>
+    <color name="tertiary_container_light">#E0FFFF</color>
+    <color name="error_container_light">#FFE3E3</color>
+    <color name="surface_container_light">#FFFFFFFF</color>
+    <color name="surface_variant_light">#90F5F5F5</color>
+    <color name="on_primary_container_light">#52FB8C00</color>
+    <color name="on_secondary_container_light">#90F4511E</color>
+    <color name="on_tertiary_container_light">#60FDD835</color>
+    <color name="on_error_container_light">#7C1D1D</color>
+    <color name="on_surface_container_light">#1B1B1B</color>
+    <color name="on_surface_variant_light">#616161</color>
+
+    <!--Dark theme colors -->
+    <color name="primary_dark">#FB8C00</color>
+    <color name="secondary_dark">#FFB300</color>
+    <color name="tertiary_dark">#FDD835</color>
+    <color name="error_dark">#B71C1C</color>
+    <color name="background_dark">#121212</color>
+    <color name="outline_dark">#616161</color>
+    <color name="on_primary_dark">#000000</color>
+    <color name="on_secondary_dark">#121212</color>
+    <color name="on_tertiary_dark">#121212</color>
+    <color name="on_error_dark">#FFFFFF</color>
+    <color name="on_background_dark">#E0E0E0</color>
+    <color name="primary_container_dark">#43FB8C00</color>
+    <color name="secondary_container_dark">#00050505</color>
+    <color name="tertiary_container_dark">#68F4511E</color>
+    <color name="error_container_dark">#490202</color>
+    <color name="surface_container_dark">#1E1E1E</color>
+    <color name="surface_variant_dark">#2C2C2C</color>
+    <color name="on_primary_container_dark">#D2F2FF</color>
+    <color name="on_secondary_container_dark">#E3F7FF</color>
+    <color name="on_tertiary_container_dark">#E0FFFF</color>
+    <color name="on_error_container_dark">#FFDAD9</color>
+    <color name="on_surface_container_dark">#ECECEC</color>
+    <color name="on_surface_variant_dark">#ECECEC</color>
+
+</resources>
