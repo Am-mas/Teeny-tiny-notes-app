@@ -10,6 +10,7 @@
 
     <!-- App Bar with Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,6 +22,9 @@
             android:background="?attr/background"
             app:titleTextColor="?attr/colorPrimary"/>
     </com.google.android.material.appbar.AppBarLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
 
     <!-- RecyclerView (For List of Notes) -->
     <androidx.recyclerview.widget.RecyclerView
@@ -44,5 +48,16 @@
         android:backgroundTint="?attr/colorPrimary"
         app:layout_anchor="@id/recyclerView"
         app:layout_anchorGravity="bottom|end" />
+    <ImageButton
+        android:id="@+id/layoutToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Toggle layout"
+        android:src="@drawable/list_view"
+        app:tint="?attr/colorPrimary"
+        app:layout_anchor="@id/tool_bar"
+        app:layout_anchorGravity="end|center_vertical" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

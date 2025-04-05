@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.NotesApplication
@@ -30,6 +32,7 @@ class NoteFragment: Fragment() {
     private  val binding get() = _binding!!
     private lateinit var noteRecycler: RecyclerView
     private lateinit var noteAdapter: NoteAdapter
+    private var isGridLayout = false
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -48,6 +51,12 @@ class NoteFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val grid = binding.layoutToggleButton
+        grid.setOnClickListener {
+            isGridLayout = !isGridLayout
+            updateLayoutManager()
+            updateToggleButton(grid)
+        }
         val notes = ArrayList<Note>()
 
         binding.addButton.setOnClickListener {
@@ -62,6 +71,23 @@ class NoteFragment: Fragment() {
             noteAdapter.submitList(notes)
         }
 
+    }
+
+    private fun updateLayoutManager(){
+        if (isGridLayout) {
+            noteRecycler.layoutManager = GridLayoutManager(requireContext(), 2)
+        } else {
+            noteRecycler.layoutManager = LinearLayoutManager(requireContext())
+        }
+    }
+
+    private fun updateToggleButton(button: ImageButton) {
+        val icon = if (isGridLayout) {
+            R.drawable.grid_view
+        } else {
+            R.drawable.list_view
+        }
+        button.setImageResource(icon)
     }
 
 }
