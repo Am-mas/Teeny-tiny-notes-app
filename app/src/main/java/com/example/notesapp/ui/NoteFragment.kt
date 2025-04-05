@@ -15,6 +15,7 @@ import com.example.notesapp.NotesApplication
 import com.example.notesapp.R
 import com.example.notesapp.adapter.NoteAdapter
 import com.example.notesapp.databinding.FragmentNoteBinding
+import com.example.notesapp.model.Note
 import com.example.notesapp.viewmodel.NoteViewModel
 import com.example.notesapp.viewmodel.NoteViewModelFactory
 import javax.inject.Inject
@@ -47,13 +48,12 @@ class NoteFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val notes = ArrayList<Note>()
+
         binding.addButton.setOnClickListener {
             findNavController().navigate(R.id.action_noteFragment_to_addNoteFragment)
         }
-        noteAdapter = NoteAdapter { note ->
-            val action = NoteFragmentDirections.actionNoteFragmentToNoteDetailFragment(note.id)
-                findNavController().navigate(action)
-        }
+        noteAdapter = NoteAdapter(parentFragmentManager)
         noteRecycler.layoutManager = LinearLayoutManager(requireContext())
         noteRecycler.adapter= noteAdapter
         LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)

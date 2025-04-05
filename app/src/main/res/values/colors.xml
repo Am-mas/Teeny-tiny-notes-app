@@ -4,7 +4,7 @@
 
     <!--Light theme colors-->
     <color name="primary_light">#FB8C00</color>
-    <color name="secondary_light">#FFB300</color>
+    <color name="secondary_light">#63FFB300</color>
     <color name="tertiary_light">#52F50C</color>
     <color name="error_light">#D32F2F</color>
     <color name="background_light">#FFFFFFFF</color>

@@ -2,27 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="?attr/background"
     tools:context="ui.NoteDetailFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/tool_bar"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:navigationIcon="@drawable/arrow_back_icon"
-            app:titleTextColor="?attr/colorPrimary"
-            android:background="?attr/background"
-            app:menu="@menu/detail_fragment_menu"
-            app:title="Note" />
-    </com.google.android.material.appbar.AppBarLayout>
+            android:layout_weight="1"
+            android:text="Notes"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Close" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,7 +48,7 @@
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:textSize="18sp"
-
+            android:textAllCaps="true"
             android:textStyle="bold|italic" />
         <View
             android:layout_width="0dp"
@@ -57,7 +68,6 @@
             app:tint="?attr/colorOnBackground" />
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/noteContent"
         android:layout_width="match_parent"
@@ -66,12 +76,4 @@
         android:padding="16dp"
         android:layout_marginTop="8dp" />
 
-<!--    <Button-->
-<!--        android:id="@+id/deleteButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Delete"-->
-<!--        android:drawableStart="@drawable/delete_icon"-->
-<!--        android:padding="16dp"-->
-<!--        android:layout_marginTop="16dp" />-->
 </LinearLayout>
